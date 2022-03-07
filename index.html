@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Seymour+One&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title>Proyecto</title>
+</head>
+<body>
+    
+  <!--Header-->
+  <header class="nav">
+        <a class="nav__titulo" href="index.html">Automoviles Argentina</a>
+  </header>
+
+  <main class="inicio">
+
+    <!--Carousel-->
+    <section data-aos="zoom-in">
+                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="./Imagenes/CarouselImagenUno.jpg" style="height: 600px;" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="./Imagenes/CarouselImagenDos.jpg" style="height: 600px;" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="./Imagenes/CarouselImagenTres.jpg" style="height: 600px;" class="d-block w-100" alt="...">
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+    </section>
+            
+    <!--Titulo-->  
+    <div class="bienvenida">
+    <h1 class="inicio__p">Bienvenido a Nuestro Concesionario</h1>
+    </div>      
+
+    <div class="seleccion">
+      <ul class="seleccion__menu">
+        <li class="menu__objetos"><a id="Autos" class="objetos__link" href="#">Autos</a></li>
+        <li class="menu__objetos"><a id="Camionetas" class="objetos__link"  href="#">Camionetas</a></li>
+        <li class="menu__objetos"><a id="Motos" class="objetos__link" href="#">Motocicletas</a></li>
+      </ul>
+    </div>
+    <!--Cards con DOM-->  
+    <section id="vehiculosCards" class="inicio__vehiculos">
+    </section>
+
+            
+    <!--Tabla DOM-->
+    <section class="tableDom">
+    <div id="seccionDos">
+    </div>
+    </section>  
+
+
+    <!--Formulario-->
+    <section class="formulario__imagen" id="section__formulario">
+      <div class="bienvenida">
+      <h3 class="inicio__p">Conocé nuestros beneficios pagando de contado</h3>
+    </div>
+      <form id="formulario" class="formulario__form" action="#" method="GET">
+        <label for="Metodo Pago" >Ingrese metodo de pago:</label>
+        <select id="formaPago" name="Metodo De pago">
+          <option value="debito">Debito</option>
+          <option value="efectivo">Efectivo</option>
+          <option value="dolares">Dolares</option>
+          <option value="euros">Euros</option>
+        </select>
+        <br>
+        <label id="valorCompra" for="Valor Compra">Ingrese el valor del vehiculo en pesos:</label>
+        <input type="number" id="ValorCompra" placeholder="Valor de la compra">
+        <br>
+        <input type="submit" name="Enviar" id="enviar">
+        <input type="reset" name="Reiniciar" id="">
+      </form>
+      <img  src="./Imagenes/metodosPago.png" alt="">
+    </section> 
+    
+
+    <!--Carro de compras-->
+    <section >
+      <div class="carro__compras" id="carro"></div>
+      <div class="carro__button">
+        <button class="btn btn-primary" id="clearStorage">Vaciar</button>
+      </div>
+    </section>
+    
+
+    <!--Imagen Oculta-->
+    <div class="infoclass">
+      <button class="btn btn-warning" id="mostrarInfo">Informacion</button>
+    </div>
+    <section class="section__oculta">
+      <div id="Info">
+        <img src="./Imagenes/Informacion.jpg" alt="">
+      </div>    
+    </section>
+   
+
+    <!--Footer-->
+  <footer class="footer">
+    
+        <h2 class="footer__h2"></h2>
+
+      <ul data-aos="zoom-in" class="footer__ul">
+        <li><a href="https://www.facebook.com/"><img src="./Imagenes/Facebook.svg" alt="Facebook" width="30px" height="30px" ></a></li> 
+        <li><a href="https://www.instagram.com/"><img src="./Imagenes/Instagram.png" alt="Instagram" width="30px" height="30px" ></a></li>
+        <li><a href="https://www.whatsapp.com/?lang=es"><img src="./Imagenes/Whatsapp.png" alt="Whatsapp" width="30px" height="30px"></a></li>
+      </ul>
+  </footer>
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- Sweet Alert -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!--codigo-->
+    <script src="productos.js"></script>
+    <script src="codigo.js"></script>
+    <!--Libreria AOS-->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+    AOS.init({
+				easing: 'ease-out-back',
+				duration: 1500
+			});
+    </script>
+</body>
+</html>
